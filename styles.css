@@ -1,0 +1,27 @@
+/* styles.css */
+
+/* Style pour espacer les conteneurs vidéo */
+.video-container {
+    margin-bottom: 20px;
+}
+
+/* Classe pour masquer les vidéos qui ne correspondent pas à la recherche */
+.hidden {
+    display: none;
+}
+
+/* Style pour les filtres */
+#keyword-filters {
+    margin-bottom: 20px;
+}
+
+#keyword-filters label {
+    margin-right: 10px;
+}
+
+/* Optionnel: centrer les vidéos et le contenu */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}

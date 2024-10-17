@@ -1,10 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les souvenirs d'Atti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
+
 <h1>Videos</h1>
-<video controls>
-<source src="sources/DSC_6469.MOV" type="video/MOV">
-change de navigateur...
-</video>
+
+<div id="keyword-filters">
+    <label><input type="checkbox" value="Ben" onchange="filterVideos()"> Ben</label>
+    <label><input type="checkbox" value="Bretagne" onchange="filterVideos()"> Bretagne</label>
+    <label><input type="checkbox" value="Attilio" onchange="filterVideos()"> Attilio</label>
+    <label><input type="checkbox" value="Discussion" onchange="filterVideos()"> Discussion</label>
+    <label><input type="checkbox" value="Journee" onchange="filterVideos()"> Journée</label>
+    <label><input type="checkbox" value="Musique" onchange="filterVideos()"> Musique</label>
+    <label><input type="checkbox" value="PingPong" onchange="filterVideos()"> Ping Pong</label>
+    <label><input type="checkbox" value="Voiture" onchange="filterVideos()"> Voiture</label>
+    <label><input type="checkbox" value="Jardin" onchange="filterVideos()"> Jardin</label>
+    <label><input type="checkbox" value="Soiree" onchange="filterVideos()"> Soirée</label>
+    <label><input type="checkbox" value="VLOG" onchange="filterVideos()"> VLOG</label>
+    <label><input type="checkbox" value="Dejeuner" onchange="filterVideos()"> Déjeuner</label>
+    <label><input type="checkbox" value="Carnac" onchange="filterVideos()"> Carnac</label>
+    <label><input type="checkbox" value="Jeu" onchange="filterVideos()"> Jeu</label>
+    <label><input type="checkbox" value="Arcade" onchange="filterVideos()"> Arcade</label>
+    <label><input type="checkbox" value="TimesUp" onchange="filterVideos()"> Time's Up</label>
+    <label><input type="checkbox" value="Jules" onchange="filterVideos()"> Jules</label>
+    <label><input type="checkbox" value="Ida" onchange="filterVideos()"> Ida</label>
+    <label><input type="checkbox" value="Yohan" onchange="filterVideos()"> Yohan</label>
+    <label><input type="checkbox" value="Apero" onchange="filterVideos()"> Apéro</label>
+    <label><input type="checkbox" value="Sdb" onchange="filterVideos()"> Salle de bain</label>
+    <label><input type="checkbox" value="Balade" onchange="filterVideos()"> Balade</label>
+
+</div>
+
+<div class="video-container" data-keywords="Balade Magasin Bretagne">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6469.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Ben dans la librairie</p>
+</div>
+
+<div class="video-container" data-keywords="Baden Bretagne Ben Discussion Jardin Journee">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6472.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Ben raconte la librairie</p>
+</div>
+
+<div class="video-container" data-keywords="Baden Bretagne Voiture Journee">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6473.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Départ pour les courses</p>
+</div>
+
+<div class="video-container" data-keywords="Discussion Journee Voiture Bretagne Ben Attilio">
+    <video width="320" height="180" controls>
+        <source src="sources/smaller.mp4" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>On parle sur le retour des courses</p>
+</div>
+
+<div class="video-container" data-keywords="Attilio Dejeuner Journee Baden Bretagne Jardin Discussion">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6477.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>La kiffeuse parle de son bonheur</p>
+</div>
+
+<div class="video-container" data-keywords="Musique Voiture Jules Bretagne Journee">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6479.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>On récupère Beigbeder</p>
+</div>
+
+<div class="video-container" data-keywords="Journee Jules Dejeuner Bretagne Balade Auray">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6480.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Petite glace et crêpes</p>
+</div>
+
+<div class="video-container" data-keywords="PingPong Jeu Journee Jardin Attilio Jules Bretagne Baden">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6484.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Ping Pong</p>
+</div>
+
+<div class="video-container" data-keywords="PingPong Jeu Journee Jardin Attilio Jules Bretagne Baden Ben">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6503.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Ping Pong de travers</p>
+</div>
+
+<div class="video-container" data-keywords="Voiture Jules Ben Bretagne Journee">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6568.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Juolt au volant</p>
+</div>
+
+<div class="video-container" data-keywords="Voiture Jules Ben Bretagne Journee Musique">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6578.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Les débuts de Romsii ?</p>
+</div>
+
+<div class="video-container" data-keywords="Voiture Jules Ben Baden Bretagne Journee Musique">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6579.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Complètement zinzin</p>
+</div>
+
+<div class="video-container" data-keywords="Jules Bretagne Journee Balade">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6580.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Pas de pizza...</p>
+</div>
+
+<div class="video-container" data-keywords="Ben Jules Voiture Bretagne Journee Musique Discussion">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6581.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Sans les mains</p>
+</div>
+
+<div class="video-container" data-keywords="Soiree Salon Baden Discussion Jules Ida Ben">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6631.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Préparation Time's Up et perversion</p>
+</div>
+
+<div class="video-container" data-keywords="Soiree Salon Baden Jeu Ben Jules Ida TimesUp">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6632.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Ben n'est pas très fort</p>
+</div>
+
+<div class="video-container" data-keywords="Soiree Salon Baden Jeu TimesUp Ben Jules Ida">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6633.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Passion mime</p>
+</div>
+
+<div class="video-container" data-keywords="Journee Ida Baden Sdb">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6634.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Avant coiffure</p>
+</div>
+
+<div class="video-container" data-keywords="Journee Jardin Baden Ben Dejeuner">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6664.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Petite découpe</p>
+</div>
+
+<div class="video-container" data-keywords="Journee Bretagne Carnac Jules Jeu Arcade">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6813.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Julot le roi du flipper</p>
+</div>
+
+<div class="video-container" data-keywords="Discussion Yohan Jules Ida Ben Attilio Journee Carnac Bretagne">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6815.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Péchés capitaux, shopping et autres discussions</p>
+</div>
+
+<div class="video-container" data-keywords="Balade Journee Carnac Bretagne Ida Ben Jules Yohan Discussion">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6825.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Yohan a la grosse tête et Ben des gros pieds</p>
+</div>
+
+<div class="video-container" data-keywords="Jeu Ida Journee Carnac Bretagne">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6828.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Les arts du cirque</p>
+</div>
+
+<div class="video-container" data-keywords="VLOG Discussion Yohan Ben Jules Ida Attilio Balade Journee Carnac Bretagne">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6830.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>VLOG Sainte Marie, benda et encore beaucoup Yohan</p>
+</div>
+
+<div class="video-container" data-keywords="Discussion Yohan Ben Ida Jules Plage Journee Bretagne Carnac">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6835.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Plage, cocktail, crepe et trempette</p>
+</div>
+
+<div class="video-container" data-keywords="Discussion Yohan Ben Ida Jules Attilio Journee Apero Musique Jardin Baden Bretagne">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6847.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Petit moment de vie a hauteur de zizi</p>
+</div>
+
+<div class="video-container" data-keywords="Ben Yohan Journee Jardin Baden Bretagne Jeu PingPong">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6848.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Le MVP est arrive</p>
+</div>
+
+<div class="video-container" data-keywords="Jules Yohan Jardin Baden Bretagne Discussion Apero">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6855.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Echange sur papi Gayet</p>
+</div>
+
+<div class="video-container" data-keywords="Salon Baden Bretagne Soiree Alcool Jeu Yohan Jules Ben">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6872.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>La magnifique histoire des jumeaux Tic et Tac</p>
+</div>
+
+<div class="video-container" data-keywords="Yohan Journee Baden Bretagne Sdb Musique">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6874.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Get ready with me avec Yohan</p>
+</div>
+
+<div class="video-container" data-keywords="Jules Journee Voiture Bretagne">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_68806.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Bientot le permis pour Jules ?</p>
+</div>
+
+<div class="video-container" data-keywords="Ben Journee Bretagne Balade Carnac">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6881.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>Ben dans toute sa pedophilie </p>
+</div>
+
+<div class="video-container" data-keywords="Jeu Arcade Journee Carnac Bretagne Jules Yohan Ben">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6883.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>L'arcade partie 1</p>
+</div>
+
+<div class="video-container" data-keywords="Jeu Arcade Journee Carnac Bretagne Jules Yohan Ben Ida">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6884.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>L'arcade partie 2</p>
+</div>
+
+<div class="video-container" data-keywords="Jeu Arcade Journee Carnac Bretagne Jules Yohan Ben Ida">
+    <video width="320" height="180" controls>
+        <source src="sources/DSC_6886.MOV" type="video/quicktime">
+        change de navigateur...
+    </video>
+    <p>L'arcade partie 3</p>
+</div>
+
+<script src="scripts.js"></script>
+
 </body>
+
 </html>
