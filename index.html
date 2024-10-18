@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les souvenirs d'Atti</title>
+    <title>Les videos d'Atti</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,30 +11,53 @@
 <h1>Videos</h1>
 
 <div id="keyword-filters">
-    <label><input type="checkbox" value="Ben" onchange="filterVideos()"> Ben</label>
-    <label><input type="checkbox" value="Bretagne" onchange="filterVideos()"> Bretagne</label>
-    <label><input type="checkbox" value="Attilio" onchange="filterVideos()"> Attilio</label>
-    <label><input type="checkbox" value="Discussion" onchange="filterVideos()"> Discussion</label>
-    <label><input type="checkbox" value="Journee" onchange="filterVideos()"> Journée</label>
-    <label><input type="checkbox" value="Musique" onchange="filterVideos()"> Musique</label>
-    <label><input type="checkbox" value="PingPong" onchange="filterVideos()"> Ping Pong</label>
-    <label><input type="checkbox" value="Voiture" onchange="filterVideos()"> Voiture</label>
-    <label><input type="checkbox" value="Jardin" onchange="filterVideos()"> Jardin</label>
-    <label><input type="checkbox" value="Soiree" onchange="filterVideos()"> Soirée</label>
-    <label><input type="checkbox" value="VLOG" onchange="filterVideos()"> VLOG</label>
-    <label><input type="checkbox" value="Dejeuner" onchange="filterVideos()"> Déjeuner</label>
-    <label><input type="checkbox" value="Carnac" onchange="filterVideos()"> Carnac</label>
-    <label><input type="checkbox" value="Jeu" onchange="filterVideos()"> Jeu</label>
-    <label><input type="checkbox" value="Arcade" onchange="filterVideos()"> Arcade</label>
-    <label><input type="checkbox" value="TimesUp" onchange="filterVideos()"> Time's Up</label>
-    <label><input type="checkbox" value="Jules" onchange="filterVideos()"> Jules</label>
-    <label><input type="checkbox" value="Ida" onchange="filterVideos()"> Ida</label>
-    <label><input type="checkbox" value="Yohan" onchange="filterVideos()"> Yohan</label>
-    <label><input type="checkbox" value="Apero" onchange="filterVideos()"> Apéro</label>
-    <label><input type="checkbox" value="Sdb" onchange="filterVideos()"> Salle de bain</label>
-    <label><input type="checkbox" value="Balade" onchange="filterVideos()"> Balade</label>
+    <div class="category">
+        <button class="toggle-category" onclick="toggleCategory('periode')">Heure</button>
+        <div id="periode" class="keywords hidden">
+            <label><input type="checkbox" value="Journee" onchange="filterVideos()"> Journée</label>
+            <label><input type="checkbox" value="Soiree" onchange="filterVideos()"> Soirée</label>
+        </div>
+    </div>
+
+    <div class="category">
+        <button class="toggle-category" onclick="toggleCategory('lieu')">Lieu</button>
+        <div id="lieu" class="keywords hidden">
+            <label><input type="checkbox" value="Bretagne" onchange="filterVideos()"> Bretagne</label>
+            <label><input type="checkbox" value="Carnac" onchange="filterVideos()"> Carnac</label>
+            <label><input type="checkbox" value="Baden" onchange="filterVideos()"> Baden</label>
+            <label><input type="checkbox" value="Auray" onchange="filterVideos()"> Auray</label>
+        </div>
+    </div>
+
+    <div class="category">
+        <button class="toggle-category" onclick="toggleCategory('personne')">Personne</button>
+        <div id="personne" class="keywords hidden">
+            <label><input type="checkbox" value="Ben" onchange="filterVideos()"> Ben</label>
+            <label><input type="checkbox" value="Attilio" onchange="filterVideos()"> Attilio</label>
+            <label><input type="checkbox" value="Jules" onchange="filterVideos()"> Jules</label>
+            <label><input type="checkbox" value="Ida" onchange="filterVideos()"> Ida</label>
+            <label><input type="checkbox" value="Yohan" onchange="filterVideos()"> Yohan</label>
+        </div>
+    </div>
+
+    <div class="category">
+        <button class="toggle-category" onclick="toggleCategory('activite')">Activité</button>
+        <div id="activite" class="keywords hidden">
+            <label><input type="checkbox" value="Discussion" onchange="filterVideos()"> Discussion</label>
+            <label><input type="checkbox" value="Musique" onchange="filterVideos()"> Musique</label>
+            <label><input type="checkbox" value="PingPong" onchange="filterVideos()"> Ping Pong</label>
+            <label><input type="checkbox" value="Jeu" onchange="filterVideos()"> Jeu</label>
+            <label><input type="checkbox" value="Arcade" onchange="filterVideos()"> Arcade</label>
+        </div>
+    </div>
 
 </div>
+
+<div id="reset-container" style="display: none;">
+    <button id="reset-button" onclick="resetFilters()">Reset Filters</button>
+</div>
+
+<hr class="separator">
 
 <div class="video-container" data-keywords="Balade Magasin Bretagne">
     <video width="320" height="180" controls>
@@ -46,7 +69,7 @@
 
 <div class="video-container" data-keywords="Baden Bretagne Ben Discussion Jardin Journee">
     <video width="320" height="180" controls>
-        <source src="/sources/DSC_6472.MOV" type="video/quicktime">
+        <source src="sources/DSC_6472.MOV" type="video/quicktime">
         change de navigateur...
     </video>
     <p>Ben raconte la librairie</p>

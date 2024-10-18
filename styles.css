@@ -1,10 +1,5 @@
 /* styles.css */
 
-/* Style pour espacer les conteneurs vidéo */
-.video-container {
-    margin-bottom: 20px;
-}
-
 /* Classe pour masquer les vidéos qui ne correspondent pas à la recherche */
 .hidden {
     display: none;
@@ -12,11 +7,68 @@
 
 /* Style pour les filtres */
 #keyword-filters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permet de passer à la ligne si l'écran est trop petit */
     margin-bottom: 20px;
 }
 
-#keyword-filters label {
-    margin-right: 10px;
+.category {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; /* Espace entre les catégories */
+}
+
+.category label {
+    margin-left: 5px; /* Espace entre les cases à cocher */
+}
+
+.toggle-category {
+    background-color: #b2bec1;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Style des menus déroulants */
+.keywords {
+    max-height: 300px; /* Définit une hauteur maximale en cas de nombreux mots-clés */
+    overflow-y: auto; /* Ajoute un défilement si le contenu dépasse */
+    transition: max-height 0.4s ease-in;
+    padding-left: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.keywords label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.separator {
+    border: none;          /* Supprime les bordures par défaut */
+    height: 5px;          /* Hauteur du trait */
+    background-color: #b2bec1; /* Couleur du trait (gris) */
+    margin: 100px 10px; /* Marge au-dessus et en dessous */
+
+}
+
+/* Style pour espacer les conteneurs vidéo */
+.video-container {
+    margin-bottom: 20px;
+    transition: transform 1s ease;
+   /* border: #b2bec1 1px solid;*/
+}
+
+.video-container:hover {
+    transform: scale(2) translate(675px, 50px); /* Agrandissement et déplacement vers le centre */
+    position: relative; /* Permet de flotter par rapport à son positionnement parent */
+    z-index: 1; /* Assure que la vidéo survolée est au-dessus des autres */
 }
 
 /* Optionnel: centrer les vidéos et le contenu */
